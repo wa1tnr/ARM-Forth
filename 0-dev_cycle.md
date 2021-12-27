@@ -268,4 +268,26 @@ kurtz +
 + --> 1 -289 
 + --> -288 
 
+AS A BIT of an easter egg, note the odd placement of a '+' in your
+terminal, after typing 'kurtz'.
+
+This is what happened:
+
+: kurtz 43 #, emit 32 #, emit cr 1 #, 2 #, 3 #, -99 #, -98 #, -97 #, .s ;
+
+ASCII 43 was entered where 'emit' can find it.  43 is the plus symbol.
+
+It was 'emit' (in Forth we say 'emit' to indicate a character prints)
+.. to your console (like   Serial.print('+');   would do).
+
+Similarly, with ASCII 32 (the space character).
+
+The 'cr' word (carriage return) gives a newline, which will visually
+apply when you follow with the '.s' word at the end of the definition
+of the 'kurtz' word.
+
+
+Mon 27 Dec 13:26:38 UTC 2021
+
+END
 ```

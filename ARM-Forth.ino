@@ -542,8 +542,8 @@ void (*function[])()={
     _initGPIO , _fetchGPIO , _lshift , _rshift , // 66
     _Keyboard_begin , _Keyboard_press , // 68
     _Keyboard_release , _Keyboard_releaseAll , _Keyboard_end , // 71
-    _blink_led , // 72  maybe unknown
-    _dropzbranch , // 73 maybe was 72
+    _blink_led , // 72 simple integer count
+    _dropzbranch , // 73
 };
 
 void _execute(){

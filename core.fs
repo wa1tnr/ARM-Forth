@@ -248,7 +248,8 @@ here [ 4 + constant dict ]
     drop true ;
 : =  ( n1 n2 - flag)  - 0= ;
 -: ?.  base c@ $10 #, - if drop . exit then drop u. ;
-: .s  depth 0= if drop ." --> empty 12:09:45 27 Dec 2021" exit then drop
+\ : .s  depth 0= if drop ." --> empty 12:09:45 27 Dec 2021" exit then drop
+: .s  depth 0= if drop ." --> empty " exit then drop
     depth 1 #, = if drop dup ." --> " ?. exit then drop
     ." --> " depth dup a! begin swap >r 1- while repeat drop
     a begin r@ ?. r> swap 1- while repeat drop ;

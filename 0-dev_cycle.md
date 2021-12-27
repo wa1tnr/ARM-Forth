@@ -1,3 +1,4 @@
+```text
 Development Cycle - wa1tnr notes
 
 Development cycle consists of editing main.fs, and
@@ -267,3 +268,4 @@ kurtz +
 + --> 1 -289 
 + --> -288 
 
+```

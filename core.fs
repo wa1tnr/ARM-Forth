@@ -131,6 +131,12 @@ code blink 72 ,
 :m wvariable  code 14 , ramHERE , 2 ramALLOT m;
 :m variable  code 14 , ramHERE , 4 ramALLOT m;
 
+\ // read 32 bits inline
+\ void _lit(){
+\     DUP;
+\     T=memory[I++]+(memory[I++]<<16);
+\ }
+
 \ think of #, as a literal instruction in an assembler
 :m #,  lit [ dup $ffff and ] , [ $10000 / $ffff and ] , m;
 :m [']  [ ' >body @ ] #, m;
@@ -249,7 +255,8 @@ here [ 4 + constant dict ]
     drop true ;
 : =  ( n1 n2 - flag)  - 0= ;
 -: ?.  base c@ $10 #, - if drop . exit then drop u. ;
-\ : .s  depth 0= if drop ." --> empty 12:09:45 27 Dec 2021" exit then drop
+: id ." 27 Dec Monday 16:46z" cr ;
+\ : .s  depth 0= if drop ." --> empty" exit then drop
 : .s  depth 0= if drop ." --> empty " exit then drop
     depth 1 #, = if drop dup ." --> " ?. exit then drop
     ." --> " depth dup a! begin swap >r 1- while repeat drop

@@ -5,6 +5,6 @@
 target
 turnkey
     decimal
-: test  ." this is going to be good 27 Dec 2021 at 12:17:31 UTC" ;
-: kurtz 43 #, emit 32 #, emit cr 1 #, 2 #, 3 #, -99 #, -98 #, -97 #, .s ;
+: test  ." this is going to be good 27 Dec 2021 at 13:29:55 UTC" ;
+: kurtz 43 #, emit 32 #, emit 255 #, cr 1 #, 2 #, 3 #, -99 #, -98 #, -97 #, .s ;
 turnkey decimal interpret

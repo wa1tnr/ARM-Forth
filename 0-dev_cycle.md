@@ -298,6 +298,31 @@ memory.h essentially is a program.  literally, it is a list of integer
 values (held as an array of integers).  These feed the virtual forth
 machine, with instructions and/or data.
 
+
+gpio setups follow.
+
+First, modify the .INO file to setup the (LED blinkie)
+port pin for OUTPUT:
+
+ $  git diff ARM-Forth.ino | cat
+diff --git a/ARM-Forth.ino b/ARM-Forth.ino
+index b77b234..2fee4bb 100644
+--- a/ARM-Forth.ino
++++ b/ARM-Forth.ino
+@@ -435,6 +435,7 @@ void _fetchMCP23017(){
+
+ // all the I/O pins needed for the steno keyboard
+ void _initGPIO(){
++    pinMode(13, OUTPUT); // tnr 27 dec
+     pinMode(9, INPUT_PULLUP);
+     pinMode(10, INPUT_PULLUP);
+     pinMode(11, INPUT_PULLUP);
+ $
+
+It is assumed, at this point, that this is the right approach
+to begin to blink an LED - leverage the Arduino IDE code base
+for this one task.
+
 Mon 27 Dec 13:26:38 UTC 2021
 
 END

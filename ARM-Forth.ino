@@ -435,6 +435,7 @@ void _fetchMCP23017(){
 
 // all the I/O pins needed for the steno keyboard
 void _initGPIO(){
+    pinMode(13, OUTPUT); // tnr 27 dec
     pinMode(9, INPUT_PULLUP);
     pinMode(10, INPUT_PULLUP);
     pinMode(11, INPUT_PULLUP);

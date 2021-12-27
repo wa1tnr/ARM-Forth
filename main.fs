@@ -1,7 +1,7 @@
-\ 800f676
-\ 2021-11-22 07:08:41
-
 \ main.fs
+\ commit 70276f2
+\ Mon Dec 27 18:20:16 UTC 2021
+
 target
 turnkey
     decimal
@@ -19,11 +19,26 @@ turnkey
   43 #, emit cr
 ;
 
-: wiggle blink blink blink blink blink
-  blink blink blink blink blink
-  blink blink blink blink blink
-;
+: wiggle blink blink blink blink blink ;
 
-: olit 1 #, dup drop 2 #, dup drop 3 #, dup drop ;
+\ literals
+\ : olit a dup drop 1 #, swap drop ;
+\ : tlit a dup drop $0100000 #, swap drop ;
+\ : vlit a dup 1+ swap - ;
+
+: dlit dup 1+ ; \ simple and does what's wanted
+: jlit dlit dlit swap - ; \ always exactly '1'
+
+\ : lit0q dup 1+ dup 1+ swap - $00 #, swap drop ;
+: lit0 dup $0 #, swap drop ;
+: lit1 lit0 1+ ;
+: lit2 lit1 1+ ;
+: lit3 lit2 1+ ;
+
+: lit16  dup $10 #, swap drop ;
+: lit7f  dup $7f #, swap drop ;
+: lit256 dup $100 #, swap drop ;
+
+: id ." 27 Dec Monday 20:24z" cr ;
 
 turnkey decimal interpret

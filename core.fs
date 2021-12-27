@@ -264,5 +264,3 @@ here [ 4 + constant dict ]
     begin .s cr query space find while
         execute depth -if huh? then drop
     repeat tib count type huh?
-
-: id ." 27 Dec Monday 18:17z" cr ;

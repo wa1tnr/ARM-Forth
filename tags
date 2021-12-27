@@ -198,7 +198,8 @@ h#	core.fs	+241
 ?.	core.fs	+250
 .s	core.fs	+252
 interpret	core.fs	+256
-test	main.fs	+8
-kurtz	main.fs	+9
+test	main.fs	+9
+kurtz	main.fs	+11
+said	main.fs	+13
 .stack	job.fs	+56
 check	job.fs	+57

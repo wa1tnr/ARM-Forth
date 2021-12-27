@@ -70,7 +70,7 @@ quit 0003
 abort 0002 
 exit 0001 
 --> empty  << the system ended the list of words with a stack report - the stack was empty
-kurtz +  << you typed this
+kurtz +  << you typed this (but not the trailing plus symbol - that was output by the system!)
 --> 1 2 3 -99 -98 -97 --> 1 2 3 -99 -98 -97  << the 'kurtz' word ran ..
     .. and populated the stack with six values
 drop --> 1 2 3 -99 -98  << you typed 'drop' and one stack element was consumed

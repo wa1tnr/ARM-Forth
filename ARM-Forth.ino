@@ -40,13 +40,28 @@ void setup(){
 
 // Forth code words
 
-void _blink_led(void) {
-    digitalWrite(LED_BUILTIN, 1);
+#define BLINK_TIME 80
+#define DELTA_TIME 700
+
+void quickly(void) {
     int elapsed=millis();
     do {
         for (volatile int slow = 3; slow > 0; slow--) { }
-    } while ((millis() - elapsed) < 1000);
+    } while ((millis() - elapsed) < BLINK_TIME);
+}
+
+void slowly(void) {
+    int elapsed=millis();
+    do {
+        for (volatile int slow = 3; slow > 0; slow--) { }
+    } while ((millis() - elapsed) < (BLINK_TIME + DELTA_TIME));
+}
+
+void _blink_led(void) {
+    digitalWrite(LED_BUILTIN, 1);
+    quickly();
     digitalWrite(LED_BUILTIN, 0);
+    slowly();
 }
 
 void _emit(){

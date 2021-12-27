@@ -203,5 +203,6 @@ test	main.fs	+10
 kurtz	main.fs	+12
 togpin	main.fs	+14
 said	main.fs	+16
+wiggle	main.fs	+22
 .stack	job.fs	+56
 check	job.fs	+57

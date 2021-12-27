@@ -19,4 +19,9 @@ turnkey
   43 #, emit cr
 ;
 
+: wiggle blink blink blink blink blink
+  blink blink blink blink blink
+  blink blink blink blink blink
+;
+
 turnkey decimal interpret

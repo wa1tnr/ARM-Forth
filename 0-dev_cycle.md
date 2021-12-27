@@ -287,6 +287,17 @@ apply when you follow with the '.s' word at the end of the definition
 of the 'kurtz' word.
 
 
+TAKE a diff of 'memory.h' after a light change to main.fs to see
+what's going on, here.
+
+(try editing a plain text string, as in this example snippet):
+
+: test  ." this is going to be good 27 Dec 2021 at 13:35:10 UTC" ;
+
+memory.h essentially is a program.  literally, it is a list of integer
+values (held as an array of integers).  These feed the virtual forth
+machine, with instructions and/or data.
+
 Mon 27 Dec 13:26:38 UTC 2021
 
 END

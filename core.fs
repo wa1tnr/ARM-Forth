@@ -255,7 +255,6 @@ here [ 4 + constant dict ]
     drop true ;
 : =  ( n1 n2 - flag)  - 0= ;
 -: ?.  base c@ $10 #, - if drop . exit then drop u. ;
-: id ." 27 Dec Monday 16:46z" cr ;
 \ : .s  depth 0= if drop ." --> empty" exit then drop
 : .s  depth 0= if drop ." --> empty " exit then drop
     depth 1 #, = if drop dup ." --> " ?. exit then drop
@@ -266,3 +265,4 @@ here [ 4 + constant dict ]
         execute depth -if huh? then drop
     repeat tib count type huh?
 
+: id ." 27 Dec Monday 18:17z" cr ;

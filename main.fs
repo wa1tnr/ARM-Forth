@@ -24,4 +24,6 @@ turnkey
   blink blink blink blink blink
 ;
 
+: olit 1 #, dup drop 2 #, dup drop 3 #, dup drop ;
+
 turnkey decimal interpret
